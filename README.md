@@ -10,7 +10,7 @@ Enterprises have tried automating customer support for years:
 Both approaches fail the same way: they can't reason over unstructured knowledge or combine information from multiple sources.
 
 ## What a plain LLM call gets wrong
-Before adding any retrieval, I tested a raw LLM against 8 realistic support tickets with zero context. The failure mode wasn't "bad answers" — it was **confident fabrication**: the model invented refund policies, confirmed loyalty perks that may not exist, and claimed it could "check with the shipping team" when it has no such capability.
+Before adding any retrieval, I tested a raw LLM against 8 realistic support tickets with zero context. The failure mode wasn't "bad answers" it was **confident fabrication**: the model invented refund policies, confirmed loyalty perks that may not exist, and claimed it could "check with the shipping team" when it has no such capability.
 
 See [`naive_baseline_results.json`](./naive_baseline_results.json) for full outputs.
 
@@ -22,7 +22,7 @@ I built a small policy knowledge base (5 documents) and added retrieval (ChromaD
 See [`rag_results.json`](./rag_results.json) for full outputs.
 
 ### What RAG still can't fix
-RAG only grounds answers in *policy text*, not *live data*. Questions like "did my order actually go through" need real order-system access which policy documents alone can never answer. That's the next phase: an agent that can call tools to fetch real data, not just retrieve documents.
+RAG only grounds answers in *policy text*, not *live data*. Questions like "did my order actually go through" need real order-system access — which policy documents alone can never answer. That's the next phase: an agent that can call tools to fetch real data, not just retrieve documents.
 
 ## Status
 - [x] Naive baseline (evidence of the problem)
