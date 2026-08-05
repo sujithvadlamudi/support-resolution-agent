@@ -22,7 +22,7 @@ I built a small policy knowledge base (5 documents) and added retrieval (ChromaD
 See [`rag_results.json`](./rag_results.json) for full outputs.
 
 ### What RAG still can't fix
-RAG only grounds answers in *policy text*, not *live data*. Questions like "did my order actually go through" need real order-system access — which policy documents alone can never answer. That's the next phase: an agent that can call tools to fetch real data, not just retrieve documents.
+RAG only grounds answers in *policy text*, not *live data*. Questions like "did my order actually go through" need real order-system access which policy documents alone can never answer. That's the next phase: an agent that can call tools to fetch real data, not just retrieve documents.
 
 ## Status
 - [x] Naive baseline (evidence of the problem)
